@@ -14,6 +14,13 @@ export default defineConfig({
     vueJsx(),
     createStyleImportPlugin({
       resolves: [VantResolve()],
+      libs: [
+        {
+          libraryName: 'vant',
+          esModule: true,
+          resolveStyle: component => `/node_modules/vant/es/${component}/style/index`,
+        },
+      ],
     }),
   ],
   css: {
