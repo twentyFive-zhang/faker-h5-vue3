@@ -1,0 +1,82 @@
+.lesson {
+	background-color: #f5f5ff;
+	// min-height: calc(100vh - env(safe-area-inset-bottom) - env(safe-area-inset-top));
+	.video-cont {
+		height: 210px;
+		background-color: #282e46;
+		margin-bottom: 10px;
+		video {
+			width: 100%;
+			min-height: 100%;
+		}
+	}
+	.info-cont {
+		margin: 0 10px 10px;
+		background-color: #fff;
+		border-radius: 14px;
+		color: #333;
+		&.content-cont {
+			padding: 15px;
+			.content-item {
+				color: #666;
+				font-size: 12px;
+				line-height: 18px;
+				margin-top: 15px;
+				white-space: pre-line;
+				&.skeleton-item {
+					min-height: 40px;
+					height: auto;
+				}
+
+				height: auto;
+			}
+			.van-divider {
+				border-color: #ccc;
+			}
+			.avatar-cont {
+				display: flex;
+				align-items: center;
+				margin-top: 15px;
+				img {
+					width: 45px;
+					height: 45px;
+					margin-right: 16px;
+				}
+				p {
+					font-size: 16px;
+					color: #000;
+					font-weight: 500;
+					height: auto;
+					flex: 1;
+					&.skeleton-item {
+						min-height: 20px;
+						height: auto;
+					}
+				}
+			}
+		}
+		.title-line {
+			font-size: 16px;
+			font-weight: 500;
+		}
+		&.title-cont {
+			padding: 10px 15px;
+			font-size: 18px;
+			line-height: 24px;
+			.title-line {
+				min-height: 24px;
+				height: auto;
+				position: inherit;
+				&.skeleton-item {
+					&::before {
+						display: none;
+					}
+				}
+				&::before {
+					align-self: flex-start;
+					margin-top: 6px;
+				}
+			}
+		}
+	}
+}
