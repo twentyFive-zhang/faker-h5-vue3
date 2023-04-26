@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
-    "build": "vite build",
+    "build": "vite build --mode production",
     "builds": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "commit": "git add . && git commit -m 'fix(文案)' && git push && yarn build"
