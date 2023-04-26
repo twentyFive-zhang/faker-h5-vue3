@@ -129,7 +129,7 @@ const School = defineComponent({
 														{
 															pageData.isLoaded &&
 															<Fragment>
-																<Image {...{ src: `/image/data/${params.type}/${sItem.id}.png`, style: { width: '100%', height: '100%' } }}></Image>
+																<Image {...{ src: `${import.meta.env.VITE_BASE}image/data/${params.type}/${sItem.id}.png`, style: { width: '100%', height: '100%' } }}></Image>
 
 																<img {...{ src: playImage, class: 'play-icon' }}></img>
 															</Fragment>

@@ -1,4 +1,4 @@
-import { defineConfig } from "vite";
+import { defineConfig,loadEnv } from "vite";
 import vue from "@vitejs/plugin-vue";
 import { VantResolve, createStyleImportPlugin } from "vite-plugin-style-import";
 // @ts-ignore
@@ -11,9 +11,11 @@ import { resolve } from "path";
 // https://vitejs.dev/config/
 
 export default ({ mode }) => {
-  console.log(mode)
+  console.log(mode,'import.meta.env.VITE_BASE',)
+  const envJson=loadEnv(mode,process.cwd())
+  console.log(envJson)
   return {
-    base: mode === 'production' ? "/faker-h5-vue3/" : "./",
+    base: envJson['VITE_BASE'],
     plugins: [
       vue(),
       vueJsx(),

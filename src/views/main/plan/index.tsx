@@ -89,8 +89,8 @@ const Plan = defineComponent({
 									}}>
 										<div {...{ class: `coverImage ${!item.id ? 'skeleton-item' : ''}` }}>
 											{
-												// <Image {...{ src: `/image/data/${params.type}/${sItem.id}.png`, style: { width: '100%', height: '100%' } }}></Image>
-												item.id && <Image {...{ src: `/image/data/${type}/${item.id}.png`, style: { width: '100%', height: '100%' } }}></Image>
+												// <Image {...{ src: `${import.meta.env.VITE_BASE}image/data/${params.type}/${sItem.id}.png`, style: { width: '100%', height: '100%' } }}></Image>
+												item.id && <Image {...{ src: `${import.meta.env.VITE_BASE}image/data/${type}/${item.id}.png`, style: { width: '100%', height: '100%' } }}></Image>
 											}
 										</div>
 										<p {...{ class: `main-item-title ${type === 'lesson' ? 'van-ellipsis' : 'van-multi-ellipsis--l2'} ${!item.id ? 'skeleton-item' : ''}` }}>{item.title}</p>
