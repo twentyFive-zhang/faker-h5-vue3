@@ -18,8 +18,8 @@ const Login = defineComponent({
 		const router = useRouter()
 		const { login } = useUserStore()
 		const data = reactive({
-			username: "",
-			password: "",
+			username: "13100001111",
+			password: "a123456",
 			check: false,
 		});
 		const onSubmit = async () => {
